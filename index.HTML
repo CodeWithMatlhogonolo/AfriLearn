@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AfriLearn - Bridging Education Gaps in Africa</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>AfriLearn</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#forum">Forum</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#language-toggle">Language</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Bridging Education Gaps in Africa</h2>
+            <p>Accessible, quality education for every learner in Africa</p>
+            <a href="#courses" class="btn">Explore Courses</a>
+        </div>
+    </section>
+
+    <section id="courses">
+        <h2>Featured Courses</h2>
+        <div class="course-list"></div>
+    </section>
+
+    <section id="resources">
+        <h2>Learning Resources</h2>
+        <div class="resource-list">
+            <div class="resource">
+                <h3>E-books</h3>
+                <p>Access a library of digital textbooks and guides.</p>
+            </div>
+            <div class="resource">
+                <h3>Video Tutorials</h3>
+                <p>Watch lessons from top educators across Africa.</p>
+            </div>
+            <div class="resource">
+                <h3>Downloadables</h3>
+                <p>Download PDFs, notes, and revision materials.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="forum">
+        <h2>Community Forum</h2>
+        <p>Ask questions, join discussions, and learn with others.</p>
+        <div class="forum-preview">
+            <p><strong>Latest Post:</strong> How do I get started with coding?</p>
+            <a href="#">Join the Discussion</a>
+        </div>
+    </section>
+
+    <section id="profile">
+        <h2>Your Profile</h2>
+        <p>Track your learning progress, enrolled courses, and achievements.</p>
+        <button onclick="alert('Profile feature coming soon!')">View Profile</button>
+    </section>
+
+    <section id="language-toggle">
+        <h2>Choose Language</h2>
+        <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="sw">Swahili</option>
+            <option value="fr">French</option>
+            <option value="ha">Hausa</option>
+            <option value="yo">Yoruba</option>
+        </select>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 AfriLearn. All rights reserved.</p>
+    </footer>
+
+    <!-- 🔐 LOGIN/SIGNUP MODALS -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login to AfriLearn</h2>
+            <input type="text" placeholder="Username" id="loginUsername">
+            <input type="password" placeholder="Password" id="loginPassword">
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="switchModal('loginModal', 'signupModal')">Sign up</a></p>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signupModal')">&times;</span>
+            <h2>Create an AfriLearn Account</h2>
+            <input type="text" placeholder="Username" id="signupUsername">
+            <input type="password" placeholder="Password" id="signupPassword">
+            <button onclick="signup()">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="switchModal('signupModal', 'loginModal')">Login</a></p>
+        </div>
+    </div>
+
+    <button class="auth-btn" onclick="openModal('loginModal')">Login / Signup</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
